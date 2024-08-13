@@ -9,4 +9,4 @@ Route::get('/', function () {
 
 Route::resource('produtos', ProdutosController::class);
 
-Route::get('/produtos/{produto}/delete', [ProdutosController::class, 'delete']);
+Route::get('/produtos/{produto}/delete', [ProdutosController::class, 'delete'])->name('produtos.delete');
