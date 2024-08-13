@@ -1,5 +1,5 @@
 <x-layout>
-    <table>
+    <table border="1">
         <thead>
             <tr>
                 <th>ID</th>
@@ -7,6 +7,9 @@
                 <th>Custo</th>
                 <th>Preco</th>
                 <th>Quantidade</th>
+                <th>Ver</th>
+                <th>Editar</th>
+                <th>Excluir</th>
             </tr>
         </thead>
         <tbody>
@@ -17,8 +20,12 @@
                     <td>{{$produto->custo}}</td>
                     <td>{{$produto->preco}}</td>
                     <td>{{$produto->quantidade}}</td>
+                    <td><a href="{{route('produtos.show', ['produto' => $produto])}}">Ver</a></td>
+                    <td><a href="{{route('produtos.edit', ['produto' => $produto])}}">Editar</a></td>
+                    <td><a href="{{route('produtos.delete', ['produto' => $produto])}}">Excluir</a></td>
                 </tr>
             @endforeach
         </tbody>
     </table>
+    <a href="{{route('produtos.create')}}">Novo produto</a>
 </x-layout>
