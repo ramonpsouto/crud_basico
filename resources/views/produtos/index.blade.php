@@ -1,0 +1,24 @@
+<x-layout>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Custo</th>
+                <th>Preco</th>
+                <th>Quantidade</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($produtos as $produto)
+                <tr>
+                    <td>{{$produto->id}}</td>
+                    <td>{{$produto->nome}}</td>
+                    <td>{{$produto->custo}}</td>
+                    <td>{{$produto->preco}}</td>
+                    <td>{{$produto->quantidade}}</td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
+</x-layout>
