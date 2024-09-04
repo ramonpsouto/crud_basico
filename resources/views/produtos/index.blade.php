@@ -9,7 +9,6 @@
                 <th>Quantidade</th>
                 <th>Ver</th>
                 <th>Editar</th>
-                <th>Excluir</th>
             </tr>
         </thead>
         <tbody>
@@ -22,7 +21,6 @@
                     <td>{{$produto->quantidade}}</td>
                     <td><a href="{{route('produtos.show', ['produto' => $produto])}}">Ver</a></td>
                     <td><a href="{{route('produtos.edit', ['produto' => $produto])}}">Editar</a></td>
-                    <td><a href="{{route('produtos.delete', ['produto' => $produto])}}">Excluir</a></td>
                 </tr>
             @endforeach
         </tbody>

@@ -2,11 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdutosController;
+use App\Http\Controllers\FilmesController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::resource('produtos', ProdutosController::class);
-
-Route::get('/produtos/{produto}/delete', [ProdutosController::class, 'delete'])->name('produtos.delete');
+Route::resource('filmes', FilmesController::class);
